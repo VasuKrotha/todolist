@@ -65,3 +65,8 @@ input {
   margin: auto;
   background-color: silver;
 }
+.bi-2x {
+  font-size: 2em;
+
+  border-radius: 50%;
+}

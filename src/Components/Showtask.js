@@ -22,7 +22,7 @@ const Showtask = ({
 
   return (
     <div
-      className={`container border border-1 rounded-2 border-${bordercolor} `}
+      className={`container border border-1 rounded-2 border-${bordercolor} mb-3`}
     >
       <div className="d-flex justify-content-between mt-4">
         <div className="d-flex justify-content-center">
@@ -47,8 +47,8 @@ const Showtask = ({
                 <div
                   className={`d-flex justify-content-between border border-2 border-${bordercolor} p-2 my-3`}
                 >
-                  <div className="d-flex flex-column justify-content-start ">
-                    <div>{item.names}</div>
+                  <div className="d-flex flex-column justify-content-start overflow-hidden ">
+                    <div className="overflow-hidden">{item.names}</div>
                     <div style={{ fontSize: 11 }}>{item.time}</div>
                   </div>
                   <div className="d-flex flex-row mt-2">

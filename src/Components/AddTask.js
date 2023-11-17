@@ -45,21 +45,22 @@ const AddTask = ({
     >
       <section>
         <form onSubmit={handleSubmit}>
-          <div
-            className={`container border border-1 rounded-2 border-${bordercolor} d-flex flex-row justify-content-center w-50 h-70 mt-4`}
-          >
-            <input
-              type="text"
-              placeholder="addTask"
-              name="task"
-              autoComplete="off"
-              value={task.names || ""}
-              onChange={(e) => setTask({ ...task, names: e.target.value })}
-              className="my-2 w-50 h-30 "
-            />
-            <button type="submit" className="btn btn-danger mx-3 my-2 ">
-              {task.id ? "update" : "Add "}
-            </button>
+          <div className="d-flex justify-content-center">
+            <div className="mt-1">
+              <input
+                type="text"
+                placeholder="addTask"
+                name="task"
+                autoComplete="off"
+                value={task.names || ""}
+                onChange={(e) => setTask({ ...task, names: e.target.value })}
+              />
+            </div>
+            <div>
+              <button type="submit" className="btn btn-danger mx-3  ">
+                {task.id ? "update" : "Add "}
+              </button>
+            </div>
           </div>
         </form>
       </section>

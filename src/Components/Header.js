@@ -24,7 +24,7 @@ const Header = ({ themecol, setthemcol }) => {
   return (
     <header>
       <div
-        className={`container border border-1 rounded-2 border-${bordercolor} d-flex flex-row justify-content-around mt-4`}
+        className={`container border-${bordercolor} d-flex flex-row justify-content-around mt-4`}
       >
         <div className="d-flex flex-row">
           <div>
@@ -33,16 +33,18 @@ const Header = ({ themecol, setthemcol }) => {
           <div className="m-2 h2">To Do List</div>
         </div>
 
-        <div class="form-check form-switch mt-3">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            id="flexSwitchCheckChecked"
-            onChange={changetheme}
-          />
-          <label class="form-check-label" for="flexSwitchCheckChecked">
-            {theme === "light" ? "lightMode" : "darkMode"}
-          </label>
+        <div class="form-check form-switch ">
+          <button onClick={changetheme} type="button" className="btn border-0">
+            {theme === "light" ? (
+              <div className="text-warning">
+                <i className="bi bi-brightness-high-fill bi-2x"></i>
+              </div>
+            ) : (
+              <div className="text-light">
+                <i class="bi bi-moon-fill bi-2x"></i>
+              </div>
+            )}
+          </button>
         </div>
       </div>
     </header>
